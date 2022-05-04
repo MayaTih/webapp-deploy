@@ -1,0 +1,5 @@
+base:
+  deployment:
+    environments:
+    - ENVIROMENT: "TIFA"
+    - PORT: "8080"

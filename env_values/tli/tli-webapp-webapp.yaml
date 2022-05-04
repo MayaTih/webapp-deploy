@@ -1,0 +1,5 @@
+base:
+  deployment:
+    environments:
+    - ENVIROMENT: "TLI"
+    - PORT: "8080"

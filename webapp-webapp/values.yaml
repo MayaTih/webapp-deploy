@@ -1,0 +1,31 @@
+base:
+  chartName: "webapp"                                                         # Имя чарта
+  deployment:
+    replicaCount: 2                                                          # кол-во реплик
+    imagePath: "mayatih/webapp"                                          # путь к образу артефакта
+    containerPort:
+      - "8080"                                                               # первым должен быть порт который слушает приложение потому что он будет в сервисе и ингресе
+    resources:                                                                # описание ресурсов
+      requests:
+        cpu: 0.9
+        memory: 900Mi
+      limits:
+        cpu: 1
+        memory: 1Gi
+
+
+
+  ingress:
+    annotations:
+      kubernetes.io/ingress.class: "nginx"                           # аннотации
+      # kubernetes.io/ingress.class: nginx
+      # kubernetes.io/tls-acme: "true"
+
+    hosts:
+      - host: ENV-webapp.cloudnative.space             # днс имя хоста, можно использовать шаблон ENV, который будет заменятся в каждой среде
+
+        ca: le 
+        paths: 
+          - path: / 
+            pathType: Prefix # путь # pathType: ImplementationSpecific # необязательный параметр, если не указывать будет ImplementationSpecific, но можно указать Exact или Prefix https://kubernetes.io/docs/concepts/services-networking/ingress/#path-types         cabundlecrt: |                         # в случае, если ca=external нужно указать cabundlecrt и tlscrt
+      

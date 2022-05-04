@@ -1,0 +1,5 @@
+base:
+  deployment:
+    environments:
+    - ENVIROMENT: "PROD"
+    - PORT: "8080"

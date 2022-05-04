@@ -1,0 +1,5 @@
+base:
+  deployment:
+    environments:
+    - ENVIROMENT: "TFI"
+    - PORT: "8080"
