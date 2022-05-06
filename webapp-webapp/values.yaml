@@ -22,7 +22,7 @@ base:
       # kubernetes.io/tls-acme: "true"
     basicAuth:                                 # если используется basic авторизация, то ниже список хешей паролей
       users:
-      - "osv:{SHA}$apr1$au8hUnIg$lLvPlUzc9BrQdXdT7vbxo."
+      - "osv:$apr1$au8hUnIg$lLvPlUzc9BrQdXdT7vbxo."
 
     hosts:
       - host: ENV-webapp.cloudnative.space             # днс имя хоста, можно использовать шаблон ENV, который будет заменятся в каждой среде
