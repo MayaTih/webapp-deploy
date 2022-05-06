@@ -1,0 +1,7 @@
+stages:
+  - build
+ 
+include:
+  - project: 'tc-center/infra/App/base/autodeploy'
+    ref: master #значение тут зависит от функционала. см. таблицу внизу страницы
+    file: '.gitlab-ci.yml'
